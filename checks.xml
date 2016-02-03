@@ -95,7 +95,9 @@
         </module>
         <module name="ParenPad"/>
         <module name="TypecastParenPad"/>
-        <module name="SeparatorWrap"/>
+        <module name="SeparatorWrap">
+            <property name="tokens" value="COMMA"/>
+        </module>
         <module name="WhitespaceAfter"/>
         <module name="WhitespaceAround">
             <property name="allowEmptyConstructors" value="true"/>
