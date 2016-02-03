@@ -12,10 +12,6 @@
         <property name="message" value="Line contains carriage return"/>
     </module>
     <module name="RegexpMultiline">
-        <property name="format" value=" \n"/>
-        <property name="message" value="Line has trailing whitespace"/>
-    </module>
-    <module name="RegexpMultiline">
         <property name="format" value="\n\n\n"/>
         <property name="message" value="Multiple consecutive blank lines"/>
     </module>
@@ -28,9 +24,11 @@
         <property name="message" value="A comment must contains some content"/>
     </module>
     <module name="RegexpMultiline">
-        <property name="format" value="\n( {1,3}| {5,})throws"/>
+        <property name="format" value="(^\s{2}(public|private|protected|).*\([^\)]+\)\n(\s{1,3}|\s{5,})throws)"/>
         <property name="message" value="Throws must be in the new line next to method"/>
     </module>
+
+
 
     <module name="TreeWalker">
        
@@ -43,7 +41,6 @@
         <module name="EqualsHashCode"/>
         <module name="InnerAssignment"/>
         <module name="InterfaceIsType"/>
-        <module name="HideUtilityClassConstructor"/>
 
         <!-- See http://checkstyle.sf.net/config_naming.html -->
         <module name="LocalVariableName"/>
@@ -88,10 +85,6 @@
         </module>
         <module name="NoLineWrap"/>
         <module name="NoWhitespaceBefore"/>
-        <module name="OperatorWrap">
-            <property name="option" value="eol"/>
-            <property name="tokens" value="BAND, BOR, BSR, BXOR, DIV, EQUAL, GE, GT, LAND, LE, LITERAL_INSTANCEOF, LOR, LT, MINUS, MOD, NOT_EQUAL, QUESTION, SL, SR, STAR "/>
-        </module>
         <module name="ParenPad"/>
         <module name="TypecastParenPad"/>
         <module name="SeparatorWrap">
