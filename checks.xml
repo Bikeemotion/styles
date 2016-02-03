@@ -54,12 +54,10 @@
         <module name="HideUtilityClassConstructor"/>
 
         <!-- See http://checkstyle.sf.net/config_naming.html -->
-        <module name="MemberName"/>
         <module name="LocalVariableName"/>
         <module name="LocalFinalVariableName"/>
         <module name="TypeName"/>
         <module name="PackageName"/>
-        <module name="ParameterName"/>
         <module name="StaticVariableName"/>
         <module name="ClassTypeParameterName">
             <property name="format" value="^[A-Z][0-9]?$"/>
