@@ -75,7 +75,6 @@
             <property name="max" value="120"/>
             <property name="ignorePattern" value="^(public|private|protected).*\x3c.*\x3e \{$"/>
         </module>
-        <module name="MethodLength"/>
 
         <module name="EmptyLineSeparator">
             <property name="tokens" value="METHOD_DEF, IMPORT, CLASS_DEF, INTERFACE_DEF, ENUM_DEF, STATIC_INIT, INSTANCE_INIT, METHOD_DEF, CTOR_DEF"/>
@@ -139,7 +138,6 @@
         <module name="RightCurly"/>
 
         <!-- See http://checkstyle.sf.net/config_misc.html -->
-        <module name="TodoComment"/>
         <module name="UpperEll"/>
         <module name="ArrayTypeStyle"/>
 
