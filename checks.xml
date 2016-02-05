@@ -4,9 +4,6 @@
         "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
 <module name="Checker">
     <module name="FileTabCharacter"/>
-    <module name="NewlineAtEndOfFile">
-        <property name="lineSeparator" value="lf"/>
-    </module>
     <module name="RegexpMultiline">
         <property name="format" value="\r"/>
         <property name="message" value="Line contains carriage return"/>
@@ -48,9 +45,6 @@
         <module name="TypeName"/>
         <module name="PackageName"/>
         <module name="StaticVariableName"/>
-        <module name="ClassTypeParameterName">
-            <property name="format" value="^[A-Z][0-9]?$"/>
-        </module>
         <module name="MethodTypeParameterName">
             <property name="format" value="^[A-Z][0-9]?$"/>
         </module>
@@ -69,8 +63,8 @@
         <!-- Checks for Size Violations.                    -->
         <!-- See http://checkstyle.sf.net/config_sizes.html -->
         <module name="LineLength">
-            <property name="max" value="120"/>
-            <property name="ignorePattern" value="^(public|private|protected).*\x3c.*\x3e \{$"/>
+            <property name="max" value="121"/>
+            <property name="ignorePattern" value=".*\x3c.*\x3e"/>
         </module>
 
         <module name="EmptyLineSeparator">
@@ -78,7 +72,6 @@
         </module>
 
         <!-- See http://checkstyle.sourceforge.net/config_whitespace.html -->
-        <module name="GenericWhitespace"/>
         <module name="MethodParamPad">
             <property name="allowLineBreaks" value="true"/>
             <property name="option" value="nospace"/>
@@ -97,7 +90,7 @@
             <property name="ignoreEnhancedForColon" value="false"/>
             <property name="tokens" value="
                 ASSIGN, BAND, BAND_ASSIGN, BOR, BOR_ASSIGN, BSR, BSR_ASSIGN,
-                BXOR, BXOR_ASSIGN, COLON, DIV, DIV_ASSIGN, EQUAL, GE, GT, LAND, LE,
+                BXOR, BXOR_ASSIGN, COLON, DIV, DIV_ASSIGN, EQUAL, GT, LAND,
                 LITERAL_ASSERT, LITERAL_CATCH, LITERAL_DO, LITERAL_ELSE,
                 LITERAL_FINALLY, LITERAL_FOR, LITERAL_IF, LITERAL_RETURN,
                 LITERAL_SYNCHRONIZED, LITERAL_TRY, LITERAL_WHILE,
